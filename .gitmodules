@@ -1,0 +1,3 @@
+[submodule "yolov7_ros/src/yolov7_ros/yolov7"]
+	path = yolov7_ros/src/yolov7_ros/yolov7
+	url = https://github.com/WongKinYiu/yolov7
