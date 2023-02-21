@@ -15,7 +15,7 @@ Install `docker`, `docker-compose`, `nvidia-docker` (i.e., `nvidia-container-too
 
 
 ```bash
-$ git clone --recurse ... # get YOLOv7 submodule
+$ git clone --recurse-submodules https://github.com/mit-acl/yolov7_ros # get YOLOv7 submodule
 $ cd yolov7_ros
 $ docker compose build
 $ docker compose up
