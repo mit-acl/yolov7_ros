@@ -28,6 +28,8 @@ $ docker compose up
 3. Start the USB camera (with remapping): `rosrun usb_cam usb_cam_node usb_cam/image_raw:=image_raw`
 4. Start `yolov7_ros` via `docker compose up`
 
-### Misc
 
-If you need visualization, make sure to run `xhost +local:docker` first.
+### Credits
+
+- [Official YOLOv7](https://github.com/WongKinYiu/yolov7)
+- [lukazso/yolov7-ros](https://github.com/lukazso/yolov7-ros)

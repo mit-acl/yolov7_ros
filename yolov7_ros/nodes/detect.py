@@ -13,6 +13,7 @@ import vision_msgs.msg as vision_msgs
 
 from yolov7_ros.wrapper import YoloV7
 from yolov7_ros.visualization import Visualizer
+from yolov7_ros.utils import create_detection_msg
 
 class Detector:
     def __init__(self):
@@ -51,6 +52,10 @@ class Detector:
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         
         detections = self.detector.detect(frame)
+
+        detmsg = create_detection_msg(msg.header, detections)
+        detmsg.header = msg.header
+        self.pub_dets.publish(detmsg)
 
         if self.pub_img_out.get_num_connections() > 0:
             self.viz.draw_2d_bboxes(frame, detections)

@@ -19,3 +19,5 @@ services:
     privileged: true
     stdin_open: true 
     tty: true
+
+# If you need visualization, make sure to run `xhost +local:docker` first.
