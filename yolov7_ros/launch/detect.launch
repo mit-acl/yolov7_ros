@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="weights" default="weights/yolov7-tiny.pt" />
+  <arg name="image_size" default="640" />
+  <arg name="confidence_threshold" default="0.25" />
+  <arg name="iou_threshold" default="0.45" />
+  <arg name="device" default="cuda" />
+
+  <node name="yolov7" pkg="yolov7_ros" type="detect.py" output="screen">
+    <param name="weights" value="$(arg weights)" />
+    <param name="image_size" value="$(arg image_size)" />
+    <param name="confidence_threshold" value="$(arg confidence_threshold)" />
+    <param name="iou_threshold" value="$(arg iou_threshold)" />
+    <param name="device" value="$(arg device)" />
+  </node>
+</launch>
