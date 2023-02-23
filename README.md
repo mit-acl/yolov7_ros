@@ -21,6 +21,14 @@ $ docker compose build
 $ docker compose up
 ```
 
+## Running inside a namespace
+
+You can use `docker compose run` to set the `ROS_NAMESPACE` environment variable:
+
+```bash
+docker compose run -e ROS_NAMESPACE=robot/camera yolov7_ros roslaunch yolov7_ros detect.launch
+```
+
 ## Webcam demo
 
 1. Install your favorite ROS web camera package. We will use [`usb_cam`](http://wiki.ros.org/usb_cam): `sudo apt install ros-noetic-usb-cam`.

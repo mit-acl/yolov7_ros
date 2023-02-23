@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   yolov7_ros:
     build: .
